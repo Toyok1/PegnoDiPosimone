@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="myStyle.css">
+  </link>
+  <title>Il pegno di Posimone</title>
+</head>
+
+<body>
+  <script>
+    var texture_enable = false;
+  </script>
+  <div class="container">
+    <canvas width="1115" height="550" id="text"></canvas>
+    <canvas width="1100" height="500" id="myCanvas"></canvas>
+  </div>
+
+  <div class="uiContainer">
+    <div id="luceX"></div>
+    <div id="luceY"></div>
+    <div id="luceZ"></div>
+
+    <div class="shadowOpt" id="shadowOpt">
+      <label for="shadowSlider" class="labelShadow">Ombre</label> 
+      <label name="shadowSlider" class="switch switchShadow">
+        <input type="checkbox" onclick="texture_enable = !texture_enable">
+        <span class="slider round"></span>
+      </label>
+      
+      <div id="bottoni">
+        <div id="visuale">
+          <h2>Cambia Orientamento Camera </h2>
+        </div>
+        <input type="button" id="button1" value="Dal Retro" class="bn3637 bn36"
+          onclick="cambiaCamera=false;cameraCinema = false;cameraAlto=false; cameraLibera=false; camera_posteriore=true"><br>
+        <input type="button" id="button2" value="Frontale" class="bn3637 bn36"
+          onclick="cambiaCamera=true;cameraCinema = false;cameraAlto=false;cameraLibera=false;camera_posteriore=true"><br>
+        <input type="button" id="button3" value="Dall'alto" class="bn3637 bn36" onclick="cameraAlto=true;cameraCinema = false;camera_posteriore=true">
+      </div>
+      <div class="padded a-container">
+        <a href="./../doc/Relazione.html">Link alla relazione</a>
+      </div>
+    </div>
+    </div>
+</body>
+<script type="text/javascript" src="resources/libraries/m4.js"></script>
+<script type="text/javascript" src="resources/libraries/glm_utils.js"></script>
+<script type="text/javascript" src="resources/libraries/webgl-lessons-ui.js"></script>
+<script type="text/javascript" src="resources/libraries/dat.gui.js"></script>
+<script type="text/javascript" src="resources/libraries/webgl-utils.js"></script>
+<script src="shaders.js"></script>
+<script src="myUtils.js"></script>
+<script src="utils.js"></script>
+<script src="geometries.js"></script>
+<script src="movement.js"></script>
+<script src="eventsHandlers.js"></script>
+<script src="drawStuff.js"></script>
+<script src="main.js"></script>
+</html>
